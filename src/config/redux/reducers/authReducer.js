@@ -1,5 +1,6 @@
 const initialState = {
   dataLogin: null,
+  dataRegister: null,
 };
 
 const authReducer = (state = initialState, action) => {
@@ -8,6 +9,11 @@ const authReducer = (state = initialState, action) => {
       return {
         ...state,
         dataLogin: action.payload,
+      };
+    case "SET_DATA_REGISTER":
+      return {
+        ...state,
+        dataRegister: action.payload,
       };
     default:
       return state;

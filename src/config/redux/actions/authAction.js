@@ -11,3 +11,9 @@ export const LoginGoogle = () => {
     return data;
   };
 };
+
+export const LoginEmail = (email, password) => {
+  return (dispatch) => {
+    dispatch({ type: "SET_DATA_LOGIN", payload: { email, password } });
+  };
+};
